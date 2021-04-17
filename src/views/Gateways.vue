@@ -14,7 +14,7 @@
     <b-row class="my-4">
       <b-col sm="3">
         <b-form>
-          <b-form-group label="User" label-align="left">
+          <b-form-group label="User" horizontal label-for="id-element">
             <b-form-select label-field="User">
               <b-form-select-option>username</b-form-select-option>
             </b-form-select>
@@ -63,15 +63,25 @@
           v-model="currentPage"
           :total-rows="totalRows"
           :per-page="perPage"
-          align="fill"
-          size="sm"
+          align="center"
           class="my-0"
+          next-text="next"
+          prev-text="prev"
+          prev-class="active"
+          next-class="active"
+          hide-goto-end-buttons
+          page-class="active"
         ></b-pagination>
       </b-col>
     </b-row>
 
-    <b-modal :id="infoModal.id" :title="infoModal.title" @hide="resetInfoModal">
-      <CreateForm />
+    <b-modal
+      :id="infoModal.id"
+      :title="infoModal.title"
+      cancel-variant="primary"
+      @hide="resetInfoModal"
+    >
+      <CreateForm :data="infoModal" />
     </b-modal>
   </b-container>
 </template>

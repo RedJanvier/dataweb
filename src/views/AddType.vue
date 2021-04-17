@@ -1,6 +1,6 @@
 <template>
   <b-form>
-    <b-form-group label="Name" label-align="left">
+    <b-form-group label="Name" horizontal label-for="id-element">
       <b-form-input :value="data.name" placeholder="Input value"></b-form-input>
     </b-form-group>
   </b-form>

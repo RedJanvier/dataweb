@@ -6,18 +6,18 @@
           <b-card-title>Update device</b-card-title>
           <b-button variant="primary">DELETE</b-button>
           <b-form>
-            <b-form-group label="ID" label-align="left">
+            <b-form-group label="ID" horizontal label-for="id-element">
               <b-form-input
                 disabled
                 placeholder="Input value(Disabled)"
               ></b-form-input>
             </b-form-group>
 
-            <b-form-group label="name" label-align="left">
+            <b-form-group label="name" horizontal label-for="id-element">
               <b-form-input placeholder="Input value"></b-form-input>
             </b-form-group>
 
-            <b-form-group label="description" label-align="left">
+            <b-form-group label="description" horizontal label-for="id-element">
               <b-form-input placeholder="Input value"></b-form-input>
             </b-form-group>
 
