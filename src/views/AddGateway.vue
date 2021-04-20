@@ -1,35 +1,16 @@
 <template>
-  <b-form>
-    <b-form-row class="d-flex justify-content-between">
-      <b-form-group label="User" horizontal label-for="id-element">
-        <b-form-select :value="data.username">
-          <b-form-select-option>sensor</b-form-select-option>
-        </b-form-select>
-      </b-form-group>
-      <b-form-group>
-        <b-button v-if="data.in_id" variant="primary">DELETE</b-button>
-      </b-form-group>
-    </b-form-row>
-
-    <b-form-group label="ID" horizontal label-for="id-element">
-      <b-form-input
-        :value="data.in_id"
-        disabled
-        placeholder="Input value(Disabled)"
-      ></b-form-input>
-    </b-form-group>
-
-    <b-form-group label="name" horizontal label-for="id-element">
+  <div>
+    <b-form-group label="name" class="long" label-align="left">
       <b-form-input :value="data.name" placeholder="Input value"></b-form-input>
     </b-form-group>
 
-    <b-form-group label="description" horizontal label-for="id-element">
+    <b-form-group label="description" class="long" label-align="left">
       <b-form-input
         :value="data.description"
         placeholder="Input value"
       ></b-form-input>
     </b-form-group>
-  </b-form>
+  </div>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api';

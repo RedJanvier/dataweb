@@ -1,9 +1,24 @@
 <template>
-  <b-container>
+  <b-container class="">
     <b-row align-v="center" align-h="center" style="height: 80vh;">
-      <b-col sm="12" md="5">
-        <h3 class="text-center">LOGIN</h3>
-        <b-form>
+      <b-col
+        sm="3"
+        class="h-100 bg-primary d-flex flex-column justify-content-between text-light"
+      >
+        <div class="mx-auto mt-5">
+          <h2>Alpha</h2>
+          <p class="text-center">ver 0.0.1</p>
+        </div>
+        <footer class="mb-5">
+          <p class="text-center">
+            Copyright &copy; 2021 MKNOD All right reserved
+          </p>
+          <p class="text-center">https://mknod.jp</p>
+        </footer>
+      </b-col>
+      <b-col sm="9">
+        <h3 class="text-center">Login</h3>
+        <b-form class="w-50 mx-auto">
           <b-form-group label-align-sm="left" label="Username">
             <b-form-input placeholder="Input value" />
           </b-form-group>
@@ -11,11 +26,9 @@
             <b-form-input type="password" placeholder="Input value" />
           </b-form-group>
           <b-form-group class="actions">
-            <b-button v-if="mode !== 'test'" variant="primary" class="px-5"
-              >ok</b-button
-            >
-            <router-link v-else to="/dashboard" class="btn btn-primary px-5">
-              ok
+            <router-link to="/dashboard" class="btn btn-primary px-5">
+              <md-icon>login</md-icon>
+              Login
             </router-link>
           </b-form-group>
         </b-form>
@@ -39,9 +52,15 @@ export default defineComponent({
 <style scoped>
 .form-group {
   display: block !important;
+  margin: 3rem 0;
 }
 .actions {
   display: flex !important;
   justify-content: center;
+}
+
+p {
+  font-size: 12px;
+  margin: 0;
 }
 </style>

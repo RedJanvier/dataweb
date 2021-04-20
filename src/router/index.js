@@ -59,7 +59,7 @@ const routes = [
   },
   {
     path: '/sensors',
-    name: 'sensors',
+    name: 'Sensors',
     component: () => import('../views/Sensors.vue'),
   },
   {
@@ -74,7 +74,7 @@ const routes = [
   },
   {
     path: '/alerts',
-    name: 'alerts',
+    name: 'Alerts',
     component: () => import('../views/Alerts.vue'),
   },
   {
