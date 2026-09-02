@@ -5,6 +5,8 @@ infrastructure — **gateways, devices, sensors, alerts** and **users**. It prov
 interface to register hardware, configure sensors and alert rules, visualize incoming measurements
 as charts, and monitor device status at a glance.
 
+<img width="1906" height="901" alt="image" src="https://github.com/user-attachments/assets/869a104b-c6ac-4dd1-aecb-62e93cd5e66f" />
+
 > UI reference: [UI Wireframes](https://www.docdroid.net/VwRfAra/ui-wireframes-pdf)
 
 ---
