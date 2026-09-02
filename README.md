@@ -219,11 +219,9 @@ The following decisions describe how the project is built today and the rational
 
 ## Continuous Integration (GitHub Actions)
 
-> **Status: not yet configured.** There is currently **no `.github/workflows/` directory** in this
-> repository, so no GitHub Actions run on push or pull request. The section below is a **recommended
-> baseline** you can add to automate linting and production builds.
-
-A minimal CI pipeline that installs dependencies, lints, and builds on every push and pull request:
+Continuous integration is defined in [`.github/workflows/ci.yml`](.github/workflows/ci.yml). It runs
+on every push and pull request against `master`, installing dependencies, linting, building the
+production bundle, and uploading the result as an artifact.
 
 ```mermaid
 flowchart LR
@@ -235,16 +233,16 @@ flowchart LR
     Build --> Artifact[Upload dist/ artifact]
 ```
 
-Create `.github/workflows/ci.yml` with:
+The workflow:
 
 ```yaml
 name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
